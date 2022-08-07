@@ -1,0 +1,2 @@
+Sujit 
+This is a new file which contains the details of how to create a txt file in java
