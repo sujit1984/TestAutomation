@@ -10,9 +10,10 @@ public class TestCase1 {
 		public static void main(String[] args) throws FileNotFoundException, IOException {
 			
 			Properties prop = new Properties();
-			FileInputStream fis = new FileInputStream("D:\\Automation\\TestAutomation\\TestProject\\src\\config\\config.properties");
+			FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\config\\config.properties");
 			prop.load(fis);
 			System.out.println(prop.getProperty("browserName"));
 			System.out.println(prop.getProperty("url"));
+			System.out.println(System.getProperty("user.dir"));
 		}
 }
