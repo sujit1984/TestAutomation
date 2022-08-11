@@ -1,2 +1,6 @@
 
 TestProject/bin/test/ReadingFiles.class
+TestProject/bin/collectionsExample/ArrayListExample.class
+TestProject/bin/collectionsExample/AutoBoxing.class
+*.html
+TestProject/bin/test/TestCase3.class
