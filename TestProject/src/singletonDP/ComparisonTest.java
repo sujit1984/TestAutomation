@@ -29,7 +29,7 @@ public class ComparisonTest {
 		SingletonTest test1 = SingletonTest.getInstance();
 		SingletonTest test2 = SingletonTest.getInstance();  // Only prints "Creating Object" once since both the references test1 and test2 are pointing to the same object 
 		
-		System.out.println(test1==test2);
+		System.out.println(test1==test2);    // returns true since both of these references are accessing the same object 
 	}
 
 }
