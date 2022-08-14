@@ -5,3 +5,4 @@ TestProject/bin/collectionsExample/AutoBoxing.class
 *.html
 TestProject/bin/test/TestCase3.class
 *.class
+TestProject/.classpath
