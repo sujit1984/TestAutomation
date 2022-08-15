@@ -13,3 +13,6 @@ TestProject/.classpath
 SeleniumTest/.classpath
 SeleniumTest/.classpath
 TestProject/.classpath
+SeleniumTest/.classpath
+TestProject/.classpath
+SeleniumTest/target/classes/META-INF/maven/com.darktest/SeleniumTesting/pom.xml
