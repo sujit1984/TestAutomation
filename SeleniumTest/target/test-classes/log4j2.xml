@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"> -->
+<Configuration status="WARN" monitorInterval="30">
+ 
+    <!-- Logging Properties -->
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
+        <Property name="APP_LOG_ROOT">./src/test/resources/logs</Property>
+    </Properties>
+
+   <Appenders>
+    <!-- Console Appender -->
+    
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+    
+     <!-- File Appender -->
+    
+	<File name="LogToFile" filename="${APP_LOG_ROOT}/AppLogs.log">
+		<PatternLayout pattern="${LOG_PATTERN}"/>
+		</File>
+		
+	
+    
+     <!-- HTML Appender -->
+    
+	<RollingFile name="fileLogger" fileName="${APP_LOG_ROOT}/app-info.html"
+               filePattern="${APP_LOG_ROOT}/app-info-%d{yyyy-MM-dd}.html">
+            <HTMLLayout charset="UTF-8" title="Selenium Info Logs" locationInfo="true" />
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+        </RollingFile>
+	</Appenders>
+ 
+
+	<Loggers>
+     
+        <Logger name="utilities" additivity="true" level="debug">
+            <AppenderRef ref="LogToFile" />
+			<AppenderRef ref="fileLogger" />
+    <!--        <AppenderRef ref="Console" /> -->
+        </Logger>
+	<!-- ROOT Configuration -->
+		<Root level="debug">
+            <AppenderRef ref="Console"/>
+        </Root>
+ 
+    </Loggers>
+    
+       
+</Configuration>

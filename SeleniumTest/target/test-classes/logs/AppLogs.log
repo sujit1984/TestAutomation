@@ -1,0 +1,5 @@
+2022-08-15T16:13:44.930+0530 DEBUG This is a Debug Log
+2022-08-15T16:13:44.933+0530 INFO This is an information Log
+2022-08-15T16:13:44.934+0530 ERROR This is an error log
+2022-08-15T16:13:44.934+0530 WARN This is a warning message
+2022-08-15T16:13:44.935+0530 FATAL This is a fatal message
