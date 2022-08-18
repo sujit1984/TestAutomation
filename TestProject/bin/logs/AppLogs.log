@@ -13,3 +13,8 @@
 2022-08-14T12:34:34.692+0530 ERROR This is an error log
 2022-08-14T12:34:34.692+0530 WARN This is a warning message
 2022-08-14T12:34:34.692+0530 FATAL This is a fatal message
+2022-08-14T12:36:45.433+0530 DEBUG This is a Debug Log
+2022-08-14T12:36:45.436+0530 INFO This is an information Log
+2022-08-14T12:36:45.436+0530 ERROR This is an error log
+2022-08-14T12:36:45.436+0530 WARN This is a warning message
+2022-08-14T12:36:45.436+0530 FATAL This is a fatal message
