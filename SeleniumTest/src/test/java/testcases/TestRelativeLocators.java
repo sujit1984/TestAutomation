@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.locators.RelativeLocator;
 
@@ -25,8 +26,11 @@ public class TestRelativeLocators {
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
 		//driver.findElement(By.id("password")).sendKeys("secret_sauce");
 		
-		driver.findElement(RelativeLocator.with(By.tagName("input")).below(By.id("user-name"))).sendKeys("secret_sauce");
-		driver.findElement(By.id("login-button")).click();
+		WebElement passwd = driver.findElement(RelativeLocator.with(By.tagName("input")).below(By.id("user-name")));
+		passwd.sendKeys("secret_sauce");
+		
+		WebElement login_btn = driver.findElement(RelativeLocator.with(By.tagName("input")).below(passwd)); 
+		login_btn.click();
 		
 
 	}
