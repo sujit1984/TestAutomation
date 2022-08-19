@@ -16,6 +16,12 @@ public class TestBrowser {
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().window().maximize();
+		String webPageTitle = driver.getTitle();
+		System.out.println("The title of the webpage is -->" +webPageTitle);
+		
+		
+		
+		driver.quit();
 	
 
 }
