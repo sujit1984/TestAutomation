@@ -32,6 +32,9 @@ public class TestRelativeLocators {
 		WebElement login_btn = driver.findElement(RelativeLocator.with(By.tagName("input")).below(passwd)); 
 		login_btn.click();
 		
+		WebElement fleece_jacket_add = driver.findElement(RelativeLocator.with(By.name("add-to-cart-sauce-labs-fleece-jacket")).below(By.partialLinkText("Fleece Jacket")).above(By.id("item_3_title_link")));
+		fleece_jacket_add.click();
+		
 
 	}
 
