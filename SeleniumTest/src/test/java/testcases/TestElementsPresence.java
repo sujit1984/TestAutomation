@@ -17,9 +17,9 @@ public class TestElementsPresence {
 	 */
 	
 	public static WebDriver driver;
-	public static boolean isElementPresent(String locator) {
+	public static boolean isElementPresent(By by) {
 		try {
-		driver.findElement(By.xpath(locator));
+		driver.findElement(by);
 		return true;
 		} catch(Throwable t) {
 			return false;
@@ -49,11 +49,14 @@ public class TestElementsPresence {
 		 * 
 		 */
 		
-		 boolean menuPresent = isElementPresent("//*[@id=\"react-burger-menu-btn\"]");
+		 boolean menuPresent = isElementPresent(By.xpath("//*[@id=\"react-burger-menu-btn\"]"));
 		 
 		 if(menuPresent) {
 			 System.out.println("The element is present on the page");
 		  }
+		 else {
+			 System.out.println("The element is not present on the page");
+		 }
 	}
 
 }
