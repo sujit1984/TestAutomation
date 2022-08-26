@@ -1,6 +1,7 @@
 package testcases;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -34,10 +35,34 @@ public class TestSelectDropdown {
 		//creating an object of the Select class 
 		
 		Select select = new Select(sortDropdown);
+		
+				
 		select.selectByValue("za");  //NAME (Z TO A)
 		//select.selectByIndex(2);   //Price (low to High)
 		//select.selectByVisibleText("Price (high to low)"); 
-
+		
+		//find and print all the options available in the dropdown 
+		List<WebElement> sortOptions = driver.findElements(By.tagName("option"));
+		
+		for (WebElement sortOption:sortOptions) {
+			System.out.println(sortOption.getText());
+		}
+		
+		
+		//printing all the links in a page
+		
+		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+		System.out.println("Total Links on this page are " +allLinks.size());
+		
+		for (WebElement link:allLinks )
+		{
+			System.out.println(link.getText());
+		}
+		
+		/*
+		 * Examples of isElementPresent , isDisplayed, isEnabled and isSelected 
+		 * 
+		 */
 	}
 
 }
