@@ -36,10 +36,22 @@ public class TestCheckboxes {
 //		driver.findElement(By.xpath("//div[contains(@class,'display')][1]/input[1]")).click();
 //		driver.findElement(By.xpath("//div[contains(@class,'display')][1]/input[2]")).click();
 	
-		for (int i =1; i <=4; i++) {
-			driver.findElement(By.xpath("//div[contains(@class,'display')][1]/input["+i+"]")).click();
+//		for (int i =1; i <=4; i++) {
+//			driver.findElement(By.xpath("//div[contains(@class,'display')][1]/input["+i+"]")).click();
+//			
+//		}
+		
+		int i = 1;
+		
+		int count = 0;
+		while(isElementPresent(By.xpath("//div[contains(@class,'display')][1]/input["+i+"]"))){
 			
+			driver.findElement(By.xpath("//div[contains(@class,'display')][1]/input["+i+"]")).click();
+			i++;
+			count++;
 		}
+		
+		System.out.println("All the checkboxes checked. Total checkboxes are " +count);
 	}
 
 }
